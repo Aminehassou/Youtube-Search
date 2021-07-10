@@ -12,12 +12,38 @@ const test = [
   {id: 8, title: "d"}
 ]
 
+function filterVideos(videos, query) {
+  if (!query) {
+    return videos
+  }
+
+  return videos.filter(video => {
+    const videoTitle = video.title.toLowerCase()
+    return videoTitle.includes(query)
+  })
+}
+
+async function fetchResults() {
+  let response = await fetch('https://randomuser.me/api/?results=1');
+  let data = await response.json();
+  return data.results
+}
+
+function handleSubmit() {
+  console.log("submitted")
+}
+
 function App() {
+  const results = fetchResults()
+  results.then(data => console.log(data[0].email))
+  const { search } = window.location
+  const query = new URLSearchParams(search).get("s")
+  const filteredVideos = filterVideos(test, query)
   return (
     <div>
-      <SearchForm />
+      <SearchForm handleSubmit={handleSubmit}/>
       <ul>
-        {test.map(video => (
+        {filteredVideos.map(video => (
           <li key={video.id}>{video.title}</li>
         ))}
       </ul>
