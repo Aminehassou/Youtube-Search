@@ -1,5 +1,7 @@
 import './App.css';
 import SearchForm from './components/SearchForm';
+import { useState } from 'react';
+import { BrowserRouter as Router } from "react-router-dom";
 
 const test = [
   {id: 1, title: "test"},
@@ -30,24 +32,28 @@ async function fetchResults() {
 }
 
 function handleSubmit() {
-  console.log("submitted")
+  const results = fetchResults()
+  results.then(data => console.log(data[0].email))
 }
 
 function App() {
-  const results = fetchResults()
-  results.then(data => console.log(data[0].email))
   const { search } = window.location
   const query = new URLSearchParams(search).get("s")
-  const filteredVideos = filterVideos(test, query)
+  const [searchQuery, setSearchQuery] = useState(query || '');
+  const filteredVideos = filterVideos(test, searchQuery)
+
   return (
-    <div>
-      <SearchForm handleSubmit={handleSubmit}/>
-      <ul>
-        {filteredVideos.map(video => (
-          <li key={video.id}>{video.title}</li>
-        ))}
-      </ul>
-    </div>
+    <Router>
+      <div>
+        <SearchForm handleSubmit={handleSubmit} searchQuery={searchQuery}
+                setSearchQuery={setSearchQuery}/>
+        <ul>
+          {filteredVideos.map(video => (
+            <li key={video.id}>{video.title}</li>
+          ))}
+        </ul>
+      </div>
+    </Router>
   );
 }
 
