@@ -5,15 +5,16 @@ function SearchForm({ handleSubmit, searchQuery, setSearchQuery }) {
   const onSubmit = e => {
     history.push(`?s=${searchQuery}`)
     e.preventDefault()
-    handleSubmit()
+    handleSubmit(searchQuery)
   };
-  
+
   return (
     <form action="/" method="get" onSubmit={onSubmit}>
         <label htmlFor="header-search">
             <span className="hidden">Youtube search</span>
         </label>
         <input
+            autoComplete="off"
             value={searchQuery}
             onInput={e => setSearchQuery(e.target.value)}
             type="text"
