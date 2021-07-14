@@ -2,11 +2,11 @@
 function Video(props) {
     
   return (
-    <div>
+    <div className="video-item">
     <a href={props.link}>
-    <img src={props.thumbnail}/> <br />
+    <img src={props.thumbnail} alt="Youtube Video"/> <br />
+    <span dangerouslySetInnerHTML={{__html: props.title}} />
     </a>
-    {props.title}
     </div>
   )}
 

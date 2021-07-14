@@ -21,3 +21,37 @@ code {
   white-space: nowrap;
   width: 1px;
 }
+
+.video-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: auto;
+  align-content: flex-start;
+}
+.video-item {
+  flex: 0 0 auto;
+  margin: 10px;
+  width: 320px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: auto;
+  align-content: center
+}
+.item {
+  flex: 0 0 auto;
+  margin: 16px;
+}
+
+
+.video-item a {
+  color: black;
+  text-decoration: none;
+}
+

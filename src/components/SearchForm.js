@@ -13,16 +13,16 @@ function SearchForm({ handleSubmit, searchQuery, setSearchQuery }) {
         <label htmlFor="header-search">
             <span className="hidden">Youtube search</span>
         </label>
-        <input
-            autoComplete="off"
-            value={searchQuery}
-            onInput={e => setSearchQuery(e.target.value)}
-            type="text"
-            id="header-search" 
-            placeholder="Youtube search"
-            name="s"
-        />
-        <button type="submit">Search</button>
+          <input
+              autoComplete="off"
+              value={searchQuery}
+              onInput={e => setSearchQuery(e.target.value)}
+              type="text"
+              id="header-search" 
+              placeholder="Youtube search"
+              name="s"
+          />
+          <button className="searchButton" type="submit">Search</button>
     </form>
   );
 }
