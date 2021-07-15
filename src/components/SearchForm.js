@@ -21,7 +21,7 @@ function SearchForm({ handleSubmit, searchQuery, setSearchQuery }) {
               onInput={e => setSearchQuery(e.target.value)}
               type="text"
               id="header-search" 
-              placeholder="Youtube search"
+              placeholder="Youtube Search"
               name="s"
           />
           <button className="search-button" type="submit"><img src={searchIcon} /></button>
