@@ -5,6 +5,7 @@ import fetchResults from './api/youtube'
 import { useState } from 'react'
 import { BrowserRouter as Router } from "react-router-dom"
 
+//app
 function App() {
   const { search } = window.location
   const query = new URLSearchParams(search).get("s")
