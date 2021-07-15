@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/Youtube-Search/static/css/main.48fcca24.chunk.css",
+    "main.js": "/Youtube-Search/static/js/main.47be6e82.chunk.js",
+    "main.js.map": "/Youtube-Search/static/js/main.47be6e82.chunk.js.map",
+    "runtime-main.js": "/Youtube-Search/static/js/runtime-main.2f78b279.js",
+    "runtime-main.js.map": "/Youtube-Search/static/js/runtime-main.2f78b279.js.map",
+    "static/js/2.99a0e5eb.chunk.js": "/Youtube-Search/static/js/2.99a0e5eb.chunk.js",
+    "static/js/2.99a0e5eb.chunk.js.map": "/Youtube-Search/static/js/2.99a0e5eb.chunk.js.map",
+    "static/js/3.db712000.chunk.js": "/Youtube-Search/static/js/3.db712000.chunk.js",
+    "static/js/3.db712000.chunk.js.map": "/Youtube-Search/static/js/3.db712000.chunk.js.map",
+    "index.html": "/Youtube-Search/index.html",
+    "static/css/main.48fcca24.chunk.css.map": "/Youtube-Search/static/css/main.48fcca24.chunk.css.map",
+    "static/js/2.99a0e5eb.chunk.js.LICENSE.txt": "/Youtube-Search/static/js/2.99a0e5eb.chunk.js.LICENSE.txt",
+    "static/media/search.57e45f87.svg": "/Youtube-Search/static/media/search.57e45f87.svg",
+    "static/media/youtube-search-logo.379b737e.png": "/Youtube-Search/static/media/youtube-search-logo.379b737e.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2f78b279.js",
+    "static/js/2.99a0e5eb.chunk.js",
+    "static/css/main.48fcca24.chunk.css",
+    "static/js/main.47be6e82.chunk.js"
+  ]
+}
