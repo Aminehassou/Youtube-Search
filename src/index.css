@@ -55,3 +55,27 @@ code {
   text-decoration: none;
 }
 
+.search-input {
+  width: 300px;
+  height: 20px;
+  stroke-width: 0%;
+  outline-color: red;
+  border-style:solid;
+  border-color: darkred;
+
+}
+
+.search-form {
+  margin-left: -35px;
+}
+
+.search-button {
+  border-style:solid;
+  border-color: red;
+  background-color: red;
+  color: aliceblue;
+  margin-left: -1px;
+  height: 26px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+

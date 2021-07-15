@@ -1,4 +1,6 @@
-import { useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom'
+
+import searchIcon from "../img/search.svg"
 
 function SearchForm({ handleSubmit, searchQuery, setSearchQuery }) {
   const history = useHistory();
@@ -9,11 +11,11 @@ function SearchForm({ handleSubmit, searchQuery, setSearchQuery }) {
   };
 
   return (
-    <form action="/" method="get" onSubmit={onSubmit}>
+    <form action="/" method="get" onSubmit={onSubmit} className="search-form">
         <label htmlFor="header-search">
             <span className="hidden">Youtube search</span>
         </label>
-          <input
+          <input className="search-input"
               autoComplete="off"
               value={searchQuery}
               onInput={e => setSearchQuery(e.target.value)}
@@ -22,7 +24,7 @@ function SearchForm({ handleSubmit, searchQuery, setSearchQuery }) {
               placeholder="Youtube search"
               name="s"
           />
-          <button className="searchButton" type="submit">Search</button>
+          <button className="search-button" type="submit"><img src={searchIcon} /></button>
     </form>
   );
 }
